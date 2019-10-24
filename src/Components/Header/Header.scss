@@ -1,0 +1,93 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+.header {
+  height: 100vh;
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.65;
+    z-index: 1;
+  }
+
+  .header-text {
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:  auto;
+    z-index: 1;
+    width: 60%;
+    height: 10%;
+  }
+}
+
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @-moz-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @-o-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @keyframes #{$animation_name} {
+      @content;
+  }
+}
+
+@mixin downAnimation ($animationName, $animationTime) {
+  // -webkit-animation: box .8s infinite;
+  // -moz-animation: box .8s infinite;
+  // animation: box .8s infinite;
+  -webkit-animation: $animationName $animationTime infinite;
+  -moz-animation: $animationName $animationTime infinite;
+  animation: $animationName $animationTime infinite;
+}
+
+@include keyframe(box) {
+  0% {
+    bottom:50px;
+  }
+  50% {
+    bottom:60px; 
+  }
+  100% {
+    bottom:50px;
+  }
+}
+
+.i-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  z-index: 2;
+  color: #666;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 26px;
+  @include downAnimation(box, 2s);
+  transition: all 1s ease-out;
+  &:hover {
+    color: #fff;
+  }
+}
+  

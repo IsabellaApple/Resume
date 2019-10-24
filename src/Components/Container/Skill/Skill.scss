@@ -1,0 +1,109 @@
+@mixin inlineBlock {
+  display: inline-block;
+}
+
+@mixin iconSetting {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.skill {
+  padding: 25px;
+  background-color: #e1e1e1;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      padding: 8px 0;
+      text-align: left;
+    }
+  }
+
+  .block-tlt {
+    color: #444;
+  }
+}
+
+.block-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-block {
+  padding: 20px 15px;
+  margin: 0 auto;
+  .block-l {
+    text-align: right;
+    @include inlineBlock;
+  }
+  .block-r {
+    padding-left: 15px;
+    @include inlineBlock;
+  }
+}
+
+.block-footer {
+  text-align: left;
+  color: #666;
+}
+
+
+.m-icon {
+  font-size: 50px;
+  color: #30b89f;
+}
+
+.i-html {
+  color: #de4b25;
+  @include iconSetting;
+}
+.i-css {
+  color: #0068bb;
+  @include iconSetting;
+}
+.i-js {
+  color: #f8af00;
+  @include iconSetting;
+}
+
+.i-jq {
+  color: #0864a6;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.i-angular {
+  color: #be002e;
+  @include iconSetting;
+}
+
+.i-react {
+  color: #5ed4f4;
+  @include iconSetting;
+}
+
+.i-material {
+  color: #48abf2;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.i-bootstrap {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #543b79;
+  width: 25px;
+  height: 25px;
+  border-radius: 7px;
+  display: block;
+  text-align: center;
+}
+
+.i-zorro {
+  color: #f03c4d;
+  font-size: 23px;
+  font-weight: bold;
+}

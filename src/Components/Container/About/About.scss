@@ -1,0 +1,100 @@
+.about {    
+    background:#212531;
+}
+
+.m-grid-wrapper {
+    padding: 50px;
+    .block-l {
+        color: #fff;
+        text-align: left;
+        h1 {
+            margin: 0;
+        }
+        .sub-tlt {
+            color: #f9bea2;
+            margin: 0;
+        }
+    }
+    .block-r {
+        position: relative;
+    }
+}
+
+.tlt-third {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.i-interest {
+    font-size: 40px;
+    width: 40px !important;
+    height: 40px;
+    padding: 15px;
+    border-radius: 99px;
+    border:1px solid #fff;
+    transition: all 0.3s ease-out; 
+}
+
+.block-box-wrapper {
+    text-align: center;
+   .block-box {
+        display: inline-block;
+        margin: 15px;
+        text-align: center;
+        transition: all 0.3s ease-out; 
+        &:hover {
+            &.block-sports {
+                color: #f34b4b;
+                .i-interest {
+                    background-color: rgba(255, 31, 31, 0.3);
+                    border-color: #f34b4b;
+                }
+            }
+            &.block-reading {
+                color: #03a9f4; 
+                .i-interest {
+                    background-color: rgba(17, 116, 186, 0.3);
+                    border-color: #03a9f4;
+                }
+            }
+            &.block-animals {
+                color: #e7c23b; 
+                .i-interest {
+                    background-color: rgba(117, 108, 32, 0.3);
+                    border-color: #e7c23b;
+                }
+            }
+            &.block-outdoor {
+                color: #4CAF50; 
+                .i-interest {
+                    background-color: rgba(27, 88, 34, 0.3);
+                    border-color: #4CAF50;
+                }
+            }
+            &.block-game {
+                color: #9c27b0; 
+                .i-interest {
+                    background-color: rgba(35, 2, 88, 0.3);
+                    border-color: #9c27b0;
+                }
+            }
+        }
+    } 
+}
+.flexSetting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexDirLeft {
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.flexDirRight {
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
